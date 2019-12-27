@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">databasetest</string>
+    <string name="action_settings">Settings</string>
+    <string name="insert">Insert</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="tips">Database test</string>
+    <string name="query">Query</string>
+    <string name="tosql_activity">Goto_SQL</string>
+    <string name="testsql">Use_SQL</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+</resources>
