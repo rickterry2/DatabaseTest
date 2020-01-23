@@ -1,4 +1,4 @@
-package com.terry.databasetest;
+package com.terry.testdemo;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
+public class DatabaseTest extends AppCompatActivity implements View.OnClickListener  {
 
     private static final String TAG = "Database_MainActivity";
     private static final long MAX = 10000;
@@ -25,29 +25,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Switch sw;
     private Thread th = null;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.databasetest_layout);
 
         textResult = findViewById(R.id.insert_result);
 
         sw = findViewById(R.id.switch1);
 
         Button mBtnInsert = findViewById(R.id.insert);
-        mBtnInsert.setOnClickListener(MainActivity.this);
+        mBtnInsert.setOnClickListener(DatabaseTest.this);
         Button mBtnDelete = findViewById(R.id.delete);
-        mBtnDelete.setOnClickListener(MainActivity.this);
+        mBtnDelete.setOnClickListener(DatabaseTest.this);
         Button mBtnUpdate = findViewById(R.id.update);
-        mBtnUpdate.setOnClickListener(MainActivity.this);
+        mBtnUpdate.setOnClickListener(DatabaseTest.this);
         Button mBtnQuery = findViewById(R.id.query);
-        mBtnQuery.setOnClickListener(MainActivity.this);
+        mBtnQuery.setOnClickListener(DatabaseTest.this);
 
         DBHelper mHelper = new DBHelper(this);
         mDatabase = mHelper.getWritableDatabase();
 
+        // Will highly improved the IO speed of database
+        mDatabase.enableWriteAheadLogging();
+
         Button an = findViewById(R.id.another);
-        an.setOnClickListener(MainActivity.this);
+        an.setOnClickListener(DatabaseTest.this);
     }
 
     @Override
@@ -57,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.i(TAG, "Switch is changed " + sw.isChecked());
                 break;
             case R.id.another:
-                Intent intent = new Intent(this, CheckLocal.class);
+                Intent intent = new Intent(this, FontTest.class);
                 startActivity(intent);
                 break;
             default:

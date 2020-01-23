@@ -1,4 +1,4 @@
-package com.terry.databasetest;
+package com.terry.testdemo;
 
 import org.junit.Test;
 

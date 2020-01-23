@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.terry.databasetest">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.terry.testdemo">
 
     <application
         android:allowBackup="true"
@@ -8,24 +9,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity"
+            android:name=".TestDemo"
             android:label="@string/app_name"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".FontTest" />
+        <activity android:name=".DatabaseTest" />
+        <activity android:name=".ResourceTest" />
+        <activity android:name=".SharePreTest" />
+        <activity android:name=".NoticeTest" />
 
-        <activity
-            android:name=".CheckLocal"
-            >
-
-        </activity>
+        <receiver android:name=".NoticeTest$BcReceiver"
+            android:exported="true"
+            android:permission="com.terry.testdemo.broadcast.permission">
+            <intent-filter>
+                <action android:name="com.terry.testdemo.bctest" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

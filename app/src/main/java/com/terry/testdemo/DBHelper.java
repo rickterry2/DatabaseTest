@@ -1,4 +1,4 @@
-package com.terry.databasetest;
+package com.terry.testdemo;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

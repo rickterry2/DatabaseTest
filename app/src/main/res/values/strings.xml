@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">databasetest</string>
+    <string name="app_name">TestDemo</string>
     <string name="action_settings">Settings</string>
     <string name="insert">Insert</string>
     <string name="update">Update</string>
@@ -10,4 +10,15 @@
     <string name="testsql">Use_SQL</string>
     <string name="off">Off</string>
     <string name="on">On</string>
+    <string name="main_tips">Choose a type of test</string>
+    <string name="database_type">DatabaseTest</string>
+    <string name="font_type">FontTest</string>
+    <string name="res_type">ResTest</string>
+    <string name="search">Search</string>
+    <string name="res_tips">Res/Intent name</string>
+    <string name="show_result">Show result</string>
+    <string name="sel_res">resource read</string>
+    <string name="sel_intent">defaultApp check</string>
+    <string name="share_type">SharePreTest</string>
+    <string name="notice_type">NoticeTest</string>
 </resources>

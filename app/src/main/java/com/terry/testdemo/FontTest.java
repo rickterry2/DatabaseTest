@@ -1,4 +1,4 @@
-package com.terry.databasetest;
+package com.terry.testdemo;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CheckLocal extends AppCompatActivity {
+public class FontTest extends AppCompatActivity {
     private TextView tv;
 
     private String u1 = "\u1019\u102d\u102f";
@@ -16,7 +16,7 @@ public class CheckLocal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checklocal);
+        setContentView(R.layout.fonttest_layout);
 
         Button bt = findViewById(R.id.getvalue);
         tv = findViewById(R.id.textView);
